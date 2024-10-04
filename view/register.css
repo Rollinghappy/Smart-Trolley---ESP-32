@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #efd1f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.center {
+    background-color: #f6e7f8;
+
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    margin-left: 20px;
+    font-family: fantasy;
+    font-size: 200%;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 5px;
+    color: purple;
+
+}
+h3 {
+    margin-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100%;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 5px;
+    color: purple;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txt_field {
+    position: relative;
+    margin: 25px 0;
+}
+
+.txt_field input {
+    border: none;
+    border-bottom: 2px solid #a75fc2;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    padding: 0 5px;
+    font-size: 16px;
+}
+
+.txt_field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: purple;
+    transition: 0.5s;
+}
+
+.txt_field input:focus ~ span::before {
+    background: #ba67d8;
+}
+
+.txt_field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: purple;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.txt_field input:valid ~ label,
+.txt_field input:focus ~ label {
+    top: -15px;
+    font-size: 16px;
+    color: purple;
+    
+}
+
+input[type="submit"] {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #e9cbf4;
+    color: purple;
+}
+
+.signup_link a {
+    color: red;
+    text-decoration: none;
+}
+
+.signup_link a:hover {
+    text-decoration: underline;
+}
+

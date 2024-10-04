@@ -1,0 +1,1105 @@
+/* Import the Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.h2-1 {
+  font-size: 48px; /* Adjust the font size */
+  font-family: 'Montserrat', sans-serif; /* Use the Montserrat font */
+  font-weight: 700; /* Use the bold variant of the font */
+  color: black; /* Set font color to black */
+  text-align: center; /* Center align the text */
+  margin-top: 20px; 
+}
+
+.h3-1 {
+  font-size: 20px; /* Adjust the font size */
+  font-family: 'Montserrat', sans-serif; /* Use the Montserrat font */
+  font-weight: 700; /* Use the regular variant of the font */
+  color: black; /* Set font color to black */
+  text-align: center; /* Center align the text */
+  margin-bottom: 20px;
+}
+
+
+
+/**
+* ! Changing default styles of the browser
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+i {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/**
+* ! Navbar STyles are here
+**/
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #800080;
+  color: white;
+  padding: 25px 60px;
+  margin-bottom: 30px;
+}
+
+.cart {
+  position: relative;
+  background-color: #fff;
+  color: #800080;
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.cartAmount {
+  position: absolute;
+  top: -15px; /* Adjust the top position to move it down */
+  right: 20px; /* Adjust the right position to move it left */
+  font-size: 12px;
+  background-color: purple;
+  color: white;
+  padding: 3px;
+  border-radius: 48px;
+}
+
+
+/**
+* ! Shop items styles are here
+**/
+
+.newfont {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800; /* Adjust the font weight to make it very bold */
+    /* You can also adjust other properties like font-size, line-height, and letter-spacing if needed */
+}
+
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 320px);
+  gap: 40px;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .shop {
+    grid-template-columns: repeat(2, 320px);
+  }
+}
+
+@media (max-width: 500px) {
+  .shop {
+    grid-template-columns: repeat(1, 320px);
+  }
+}
+.item {
+    /* Transitions for smooth effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, background-color 0.3s ease;
+  
+    /* Vivid border and subtle shadow */
+    border: 2px solid #800080;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  
+    /* Rounded corners and flexible height */
+    border-radius: 34px;
+    height: auto; /* Adjust height as needed */
+    margin: 10px; /* Consistent margins for spacing */
+  }
+  
+  .item:hover {
+    /* Slight magnification and playful color shift */
+    transform: scale(1.03);
+    background-color: #f5e0ff;
+  
+    /* Vibrant border and prominent shadow */
+    border-color: #b150c2;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .item img {
+    /* border: 2px solid #800080; */
+    border-radius: 34px;
+    height: 45%;
+    width: 90%;
+    margin-left: 15px;
+    margin-top: 20px;
+    /*margin: 50px 50px;*/
+    transition: transform 0.3s ease; /* Add transition effect */
+  }
+  
+  .item:hover img {
+    transform: scale(1.1); /* Magnify image on hover */
+  }
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+
+.price-quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.price {
+  margin-right: 65px; /* Add right margin to create space between price and quantity */
+}
+
+
+.price-quantity h2 {
+  font-size: 30px; /* Set font size to 15 pixels */
+  font-weight: 700; /* Set font weight to 700 (bold) */
+  color: #088178; /* Set color for the price text */
+}
+
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-container button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.quantity-container button:hover {
+  color: #007bff;
+}
+
+.bi-dash-lg {
+  color: red;
+}
+
+.bi-plus-lg {
+  color: green;
+}
+
+/**
+* ! style rules for label and some buttons
+**/
+
+.text-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.HomeBtn,
+.checkout,
+.removeAll {
+  background-color: #800080;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.checkout {
+  background-color: green;
+}
+.removeAll {
+  background-color: red;
+}
+.bi-x-lg {
+  color: red;
+  font-weight: bold;
+}
+
+/**
+* ! style rules for shopping-cart
+**/
+
+.shopping-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/**
+* ! style rules for cart-item
+**/
+
+.cart-item {
+  border: 2px solid #800080;
+  border-radius: 50px;
+  display: flex;
+  width: 90%;
+  max-width: 700px;
+  height: 230px;
+}
+
+.cart-item img {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 30px;
+ 
+  justify-content: center;
+  
+}
+
+.title-price-x {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-price p {
+  font-size: 18px;
+  color: #800080;
+  margin-bottom: 5px; /* Add some space between product name and price */
+}
+
+.cart-item-price {
+  background-color:#ffc6ff;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-weight: bold;
+}
+
+.total-price {
+  color: #800080;
+  font-weight: bold;
+  background-color: #f6e7f8;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    width:100%;
+    background-color: #f6e7f8;
+  
+}
+#search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusted to add space on both sides */
+    background-color: #800080; /* Matched the color to the webpage */
+    padding: 15px 20px; /* Adjusted padding for space around the search bar */
+}
+
+#search-input {
+    flex: 1; /* Take up all available space */
+    padding: 10px;
+    font-size: 16px;
+    border: none; /* Remove border for a cleaner look */
+    border-radius: 5px;
+    margin-right: 10px; /* Add some space between input and button */
+}
+
+#search-button {
+    background-color: #4B0082;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #800080; /* Darker purple color on hover */
+}
+
+
+/* ... (existing styles) ... */
+#product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust as needed */
+}
+
+.pro {
+    width: 48%; /* Adjust the width as needed */
+    margin-bottom: 20px; /* Add some margin between products */
+}
+
+#product-container .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid purple;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 35px 0;
+    transition: 0.3s ease;
+    padding: 15px 15px;
+    position: relative;
+}
+#product-container p {
+    text-align: center;
+    font-size: 18px;
+    color: #5e5d5a;
+}
+
+#product-container .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product-container .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product-container .pro .des {
+    text-align: start;
+    padding: 15px 0px;
+}
+
+#product-container .pro .des span {
+    color: #5e5d5a;
+    font-size: 15px;
+}
+
+#product-container .pro .des h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product-container .pro .des .star {
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product-container .pro .des .cart-container {
+    width: 100%; /* Adjusted width to 100% */
+}
+
+#product-container .pro .des h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+/* ... (existing styles) ... */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+    background-color: #f6e7f8;
+
+    box-shadow: 0 15px 15px rgba(0,0,0,0.06);
+    z-index: 999;
+    position: sticky;
+    top:0;
+    left:0;
+}
+.logo {
+    width: 80px;
+    height: 80px;
+}
+#navbar{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}
+/* ... (existing styles) ... */
+
+#navbar li {
+    list-style: none;
+    padding: 0 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: purple;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar li a span {
+    margin-top: 5px; /* Adjust the spacing between icon and text */
+}
+
+/* ... (existing styles) ... */
+
+#navbar li a:hover{
+    color:#088178;
+    /* background-color: #f0ffff; */
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color:#088178; /* Home link will be highlighted*/
+
+}
+
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    /* background: #088178; */
+    position: absolute;
+    bottom: -4px;
+    left: 25px;
+}
+
+/* Increase size and change color for navbar text on hover */
+#navbar li a:hover {
+    font-size: 18px; /* Adjust the size as needed */
+    color: purple; /* Change to the desired color */
+}
+
+/* Increase size a bit more for shopping bag icon on hover */
+#navbar li a i.fa-home:hover {
+    font-size: 26px; /* Adjust the size as needed */
+    color: purple; /* Change to the desired color */
+}
+#navbar li a i.fa-book:hover {
+    font-size: 26px; /* Adjust the size as needed */
+    color: purple; /* Change to the desired color */
+}
+#navbar li a i.fa-pencil-alt:hover {
+    font-size: 26px; /* Adjust the size as needed */
+    color: purple; /* Change to the desired color */
+}
+#navbar li a i.fa-print:hover {
+    font-size: 26px; /* Adjust the size as needed */
+    color: purple; /* Change to the desired color */
+}
+
+#navbar li a i.fas.fa-user:hover {
+    font-size: 26px; /* Adjust the size as needed */
+    color: purple; /* Change to the desired color */
+}
+
+#navbar li a i.fas.fa-shopping-bag:hover {
+    font-size: 26px; /* Adjust the size as needed */
+    color: purple; /* Change to the desired color */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Fix typo here */
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color:#1c1c1a;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color:black;
+}
+h4{
+    font-size: 20px;
+    color: white;
+}
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+p{
+    font-size: 16px;
+    color: white;
+    margin:15px 0 20px 0;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+
+/* ... (existing styles) ... */
+/*#hero {
+    background-image: url("https://png.pngtree.com/background/20210712/original/pngtree-purple-book-education-hand-drawn-magnifying-glass-stationery-background-picture-image_1177994.jpg");
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 0 0 100px;  Adjusted padding: top, right, bottom, left 
+    position: relative;
+}*/
+
+#hero {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*padding: 0 10px 0 10px; /* Adjusted padding: top, right, bottom, left */
+    position: relative;
+    display: flex;
+    overflow: auto;
+}
+
+.images-container {
+    display: flex;
+    transition: transform 4s ease-in-out;
+    width: 100%; /* Adjusted width to accommodate all images */
+}
+
+.images-container img {
+    /*flex: 1;*/
+    width: 100%;
+    height: 100vh; /* Set height to 100% of the viewport height */
+    object-fit: cover;
+    
+}
+
+
+
+
+#slideshow {
+    /*position: relative;*/
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+
+
+
+
+.box {
+    max-width: 600px;
+    margin: 15px 0 0 50px; /* Adjusted margin: top, right, bottom, left */
+    padding: 20px;
+    position: absolute;
+    top: 40%; /* Adjusted top position */
+    left: 55%; /* Adjusted left position */
+    transform: translate(0, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(128, 0, 128, 0.7);
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+}
+
+
+
+.welcome-message {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #FFD700; /* Highlight color (choose your desired color) */
+}
+
+.main-heading {
+    font-size: 48px;
+    line-height: 64px;
+}
+
+.sub-heading {
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.description {
+    font-size: 18px;
+    margin: 15px 0 20px 0;
+}
+
+.shop-now-btn {
+    background-color: #800080; /* Purple color for the button */
+    border: none;
+    color: white; /* Text color for the button */
+    font-weight: 900;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+    background-color: #4B0082; /* Darker purple color on hover */
+}
+
+/* ... (existing styles) ... */
+
+
+/*.box h1,h2,h4,p{
+    color: white;
+    
+}*/
+
+#hero button{
+        background-color: skyblue;
+        border: none;
+        color: black;
+        font-weight: 900;
+        padding: 15px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 2px 2px;
+        cursor: pointer;
+      
+}
+/* For making all feature box in one line */
+
+#feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 1px solid purple;
+    /*border: 1px solid #EAD196;*/
+    border-radius: 8px;
+    margin: 15px 0;
+    transition: transform 0.3s ease-in-out;
+}
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 74px rgba(0,0,0,0.1);
+    transform: scale(1.1);
+}
+/* making our image responsive*/
+
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#feature .fe-box h6{
+    padding: 9px 8px 6px 8px ;
+    line-height: 1;
+    border-radius: 8px;
+    color: white;
+    background-color: purple;
+    /*background-color: #EAD196;*/
+    margin-top: 10px;
+}
+#product1{
+    text-align: center;
+}
+#product1 .pro{
+    
+    width:23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid purple;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 35px 0;
+    transition: 0.3s ease;
+    padding: 15px 15px;
+    position: relative;
+    
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 15px 0px;
+}
+#product1 .pro .des span{
+    color:#5e5d5a;
+    font-size: 15px;
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+#product1 .pro .des .star{
+    font-size: 12px;
+    color: rgb(243,181,25);
+}
+#product1 .pro .des .cart1 {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius:50px;
+        color: #088178;
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+         
+}
+
+#product1 .pro .des h4{
+    
+    font-size: 15px;
+    font-weight: 700;
+    color:#088178;
+}
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#newstext{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(125, 10, 10);
+    flex-direction: column; 
+    
+    height: 30vh;
+    width: 100%;
+    
+}
+#newstext h4{
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+} 
+#newstext p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+
+#newstext p span{
+
+    color: #ffbd27;
+}
+
+#newstext .form{
+    display: flex;
+    width: 40%;
+}
+
+
+#newstext input{
+    height: 3.125rem;
+    padding: 0 1.25em ;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    
+}
+#newstext button{
+    background-color: skyblue;
+        border: none;
+        color: black;
+        font-weight: 900;
+        padding: 15px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 2px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+        white-space: nowrap;
+}
+
+#footer {
+    background-color: purple; /* Deep purple */
+    color: #fff;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.footer-col {
+    width: 22%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.footer-col img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-col h4 {
+    color: #FFD700; /* Gold color for headings */
+}
+
+.footer-col p {
+    margin: 5px 0;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.app-icons img {
+    width: 120px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+#categories {
+    display: none;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#shop:hover #categories {
+    display: block;
+}
+
+#categories li {
+    background-color:rgb(243, 237, 200, 0.7);
+    border-bottom: 1px solid #ddd;
+}
+
+#categories li a {
+    display: block;
+    padding: 10px;
+    color:black;
+    width: 160px;
+}
+.cart-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 150px;
+}
+
+.add-to-cart,
+.decrement,
+.increment {
+    background-color: purple;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quantity-container {
+    display: none; /* Initially hide the decrement and increment buttons */
+    align-items: center;
+}
+
+.quantity-value {
+    font-size: 18px;
+    margin: 0 8px;
+    color: #fff;
+}
+#copyright {
+    text-align: center;
+    padding: 10px;
+    background-color: purple;
+    color: #ffffff;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    width: 100%;
+}
+
+/* Add other styles from stylebook.css as needed */
+/* Add styles specific to stationary.html */
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid purple;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 35px 0;
+    transition: 0.3s ease;
+    padding: 15px 15px;
+    position: relative;
+}
+
+#product1 .pro .des {
+    text-align: start;
+    padding: 15px 0px;
+}
+
+#product1 .pro .des span {
+    color: #5e5d5a;
+    font-size: 15px;
+}
+
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .pro .des .star {
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des .cart1 {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    color: #088178;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#product1 .pro .des h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+footer {
+    display: flex;
+    background-color: purple;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+
+footer .col{
+    width:23%;
+min-width: 250px;
+padding: 10px 12px;
+margin: 35px 0;
+color: white;
+padding: 15px 15px;
+
+}
+section .copyright{
+    text-align: center;
+}
+
+footer a{
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+}
+footer .follow{
+    margin-top: 20px;
+}
+footer .follow i{
+    color: white;
+    padding-right: 4px;
+    cursor: pointer;
+}
+footer .follow i:hover,
+footer a:hover{
+    color:#088178;
+}

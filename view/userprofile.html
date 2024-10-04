@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Mart - Books</title>
+        <link rel="stylesheet" href="src/style.css">
+        <link rel="stylesheet" href="userprofile.css">
+        <script defer src="userprofile.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="icon" type="image/png" href="logo.png">
+    </head>
+
+<body>
+    <section id="header">
+        <div class="left">
+          <a><img src="logo.png" class="logo" alt="Logo"></a>
+        </div>
+        <h2 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">SHOP EASE </h2>
+        <div class="right">
+          <ul id="navbar">
+            <li><a href="userprofile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-bag"></i><span>Cart</span><div id="cartAmount" class="cartAmount">0</div></a></li> <!-- Cart link with cartAmount -->
+            <li><a href="transactions.html"><i class="fas fa-receipt"></i><span>Transactions</span></a></li>
+          </ul>
+          </ul>
+        </div>
+      </section>
+    <section id="product1" class="section-p1">
+       
+        <h2 class="h2-1">Explore About You</h2>
+        <h3 class="h3-1">Find your orders and more!!</h3></section>
+
+<section id="user-profile" class="section-p1">
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="avatar-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" alt="User Avatar" id="avatar">
+                <input type="file" id="avatar-input" accept="image/*">
+            </div>
+            <h2 style="color: white;">User Profile</h2>
+        </div>
+        <div class="profile-details">
+            <div class="user-details">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Your Name" readonly>
+            </div>
+            <div class="user-details">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="xxxx@bmsce.ac.in" readonly>
+            </div>
+            <div class="user-details">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" placeholder="123 Main Street, City" readonly></textarea>
+            </div>
+            <div class="user-details">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91" readonly>
+            </div>
+            <div class="user-details">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" placeholder="2004-01-01" readonly>
+            </div>
+        </div>
+        <div class="profile-actions">
+            <button id="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+            <button id="account-settings-btn"><i class="fas fa-cogs"></i> Account Settings</button>
+        </div>
+    </div>
+</section>
+
+
+<footer id="copyright" class="copyright">
+    <p style="font-style: italic; font-weight: bolder;">&copy;<p style="font-style: italic; font-weight: bolder;">&copy;T&L: Since 2023 - ALL RIGHTS</p></p>
+</footer>
+
+</body>
+</html>
